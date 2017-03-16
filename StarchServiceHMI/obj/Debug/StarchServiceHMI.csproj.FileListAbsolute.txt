@@ -1,0 +1,114 @@
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\ApplicationInsights.config
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\csc.exe
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\vbc.exe
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\VBCSCompiler.exe
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\StarchServiceHMI.dll.config
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\StarchServiceHMI.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\StarchServiceHMI.pdb
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Antlr3.Runtime.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\EntityFramework.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\EntityFramework.SqlServer.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.Web.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Newtonsoft.Json.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Helpers.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Mvc.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Optimization.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Razor.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Razor.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\WebGrease.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\EntityFramework.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\EntityFramework.SqlServer.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.Web.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Helpers.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Mvc.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Optimization.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Razor.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Razor.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Antlr3.Runtime.pdb
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\bin\Newtonsoft.Json.xml
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.dll
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.pdb
+C:\Users\fame_\Desktop\New folder\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.csprojResolveAssemblyReference.cache
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\ApplicationInsights.config
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\csc.exe
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\vbc.exe
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\VBCSCompiler.exe
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\StarchServiceHMI.dll.config
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\StarchServiceHMI.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\StarchServiceHMI.pdb
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Antlr3.Runtime.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\EntityFramework.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\EntityFramework.SqlServer.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.Web.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Newtonsoft.Json.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Helpers.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Mvc.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Optimization.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Razor.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Razor.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\WebGrease.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\EntityFramework.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\EntityFramework.SqlServer.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.Web.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Helpers.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Mvc.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Optimization.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.Razor.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Razor.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Antlr3.Runtime.pdb
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Newtonsoft.Json.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.csprojResolveAssemblyReference.cache
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.dll
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.pdb

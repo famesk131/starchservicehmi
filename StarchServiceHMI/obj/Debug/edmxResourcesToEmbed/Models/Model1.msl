@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StarchServiceHMIModelStoreContainer" CdmEntityContainer="StarchServiceHMIEntities">
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="StarchServiceHMIModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
