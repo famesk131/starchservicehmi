@@ -12,13 +12,20 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Preparation 1 Overview </h3> <button type="button" class="btn btn-secondary">Secondary</button>
-                                
-                                
-                            </div>
+                                <b class="panel-unit" align ="left "><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Preparation Line 1 Overview </b>
+                                <div style="display: inline-block;">
+                                    <button style="margin-left: 15px;" onclick="location.href='@Url.Action("PREP1Desanding", "Prep")'; return false;" type="button" class="btn btn-secondary"> Desanding </button>
+                                    <button onclick="location.href='@Url.Action("PREP1Washer", "Prep")'; return false;" type="button" class="btn btn-secondary"> Washer </button>
+                                    <button onclick="location.href='@Url.Action("PREP1Chopper", "Prep")'; return false;" type="button" class="btn btn-secondary"> Chopper </button>
+                                    <button onclick="location.href='@Url.Action("PREP1Rasper", "Prep")'; return false;" type="button" class="btn btn-secondary"> Rasper </button>
+                                </div>
+
+
+
+                                </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/PREP/PREPOver1.svg" type="image/svg+xml" />
+                                    <object data="/Content/PREP1/PREP1Overs.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>

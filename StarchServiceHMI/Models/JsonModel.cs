@@ -20,6 +20,12 @@ namespace StarchServiceHMI.Models
             get { return id; }
             set { id = value; }
         }
+
+        internal static void getAllMachineTagValue()
+        {
+            throw new NotImplementedException();
+        }
+
         private Boolean s;
 
         public Boolean S
@@ -80,7 +86,7 @@ namespace StarchServiceHMI.Models
 
         public void collectJsonValueToDB()
         {
-            JObject jsonResponse = getAllMachineTagValue("http://192.168.245.130:39320/iotgateway/read");
+            JObject jsonResponse = getAllMachineTagValue("http://192.168.245.147:39320/iotgateway/read");
             SqlConnection conn = ConnectionBuilder.getConnection();
             string sql = "INSERT INTO Value (tag_name_fk, v) VALUES (@param1, @param2)";
             SqlCommand sqlCom = new SqlCommand(sql, conn);

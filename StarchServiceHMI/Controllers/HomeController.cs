@@ -41,14 +41,14 @@ namespace StarchServiceHMI.Controllers
              }*/
 
 
-            // string Identifier = @"http://192.168.245.131:39320/iotgateway/read?ids=simulator.Device1.ABC";
+            // string Identifier = @"http://192.168.245.144:39320/iotgateway/read?ids=simulator.Device1.ABC";
             //JsonModel json = new JsonModel(Identifier);
             //ViewData["Message_Id"] = json.Id;
             //ViewData["Message_V"] = json.V;
 
             //MachineTag.getAll();
 
-            //string x = JsonModel.getJsonObject("http://192.168.245.131:39320/iotgateway/read");
+            //string x = JsonModel.getJsonObject("http://192.168.245.144:39320/iotgateway/read");
             new JsonModel().collectJsonValueToDB();
             
             //ViewData["Message"] = x;
@@ -77,7 +77,7 @@ namespace StarchServiceHMI.Controllers
             return View();
         }
 
-        public ActionResult PID()
+        public ActionResult Alarm()
         {
             ViewBag.Message = "Your contact page.";
 
@@ -98,7 +98,7 @@ namespace StarchServiceHMI.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View("Section/CEX");
+            return View();
         }
 
         public ActionResult FEX()

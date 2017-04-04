@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Starch Web Service HMI";
+}
+<body>
+    <div id="wrapper">
+        @Html.Partial("_LayoutNavbar")
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Vibrator: MM4 </b>
+                                <div style="display: inline-block;">
+                                    <button style="margin-left: 15px;" onclick="location.href='@Url.Action("VIB01", "Vib")'; return false;" type="button" class="btn btn-secondary" "> VIB01 </button>
+                                    <button  class="btn btn-secondary disabled"> MM4 </button>
+                                    
+                                    <button onclick="location.href='@Url.Action("VIBOver", "Vib")'; return false;" type="button" class="btn btn-primary active"> VIB: Overview </button>
+                                </div>
+                                <div style="display: inline-block; float: right;">
+                                    <button onclick="location.href='@Url.Action("PREP1Desanding", "Prep")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
+                                    <button onclick="location.href='@Url.Action("PREP1Washer", "Prep")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
+
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <object data="/Content/PREP1/Desanding1.svg" type="image/svg+xml" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+</body>

@@ -5062,144 +5062,99 @@ AUoCIgIkAUsCJgIqAU4CLAIsAVMCMgIyAVQCNAI0AVUCRgJJAVYCSwJLAVoCUwJTAVsCWAJhAVwC\
 ZAJlAWYCaAJpAWgCbAMiAWoDJwMnAiEDKQM0AiIDNwM5Ai4DQwNDAjEAAA==")}
 ]]>
 </style>
-<rect x="-0.231" y="0.585" style="fill:#CFCECE;stroke:#000000;stroke-width:4;stroke-miterlimit:10;" width="1197.75" height="578.829"/>
-<polygon style="fill:#6B6B6A;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="598.869,201.476 812.574,201.476 
-	790.563,348.623 622.495,348.623 "/>
-<polygon style="fill:#434343;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="633.355,350.07 633.355,381.502 
-	605.543,403.883 807.456,403.883 779.948,379.26 779.948,350.07 "/>
-<polyline style="fill:#C6C6C4;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="675.307,352.543 734.259,352.543 
-	734.259,401.783 675.307,401.783 675.307,354.637 "/>
-<rect x="665.971" y="352.543" style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" width="78.114" height="49.24"/>
-<rect x="698.885" y="319.018" style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" width="11.795" height="48.191"/>
-<line style="fill:#6B6B6A;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="677.765" y1="371.748" x2="734.259" y2="371.748"/>
-<line style="fill:#6B6B6A;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="676.777" y1="385.691" x2="733.278" y2="385.691"/>
-<line style="fill:#6B6B6A;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="684.117" y1="356.619" x2="725.141" y2="356.619"/>
-<line style="fill:#6B6B6A;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="676.121" y1="397.914" x2="732.618" y2="397.914"/>
-<polygon style="fill:#BCB8B8;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="669.951,140.821 397.563,237.677 
-	397.563,196.124 668.619,101.262 "/>
-<line style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="397.563" y1="212.084" x2="670.005" y2="111.824"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M418.771,208.481c0,0,1.492-12.917,5.153-4.942
-	c2.952,6.435-1.08,16.24,1.492,8.297c2.572-7.943-2.98,17.473-10.585,12.637c0,0-5.548-5.927,2.448-10.873"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M434.432,201.717c0,0,1.496-12.921,5.153-4.946
-	c2.956,6.435-1.079,16.241,1.492,8.298c2.571-7.945-2.98,17.474-10.585,12.633c0,0-5.555-5.927,2.455-10.873"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M450.448,195.793c0,0,1.496-12.918,5.153-4.942
-	c2.952,6.435-1.079,16.238,1.492,8.293c2.568-7.939-2.983,17.475-10.588,12.639c0,0-5.552-5.931,2.455-10.871"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M466.112,188.95c0,0,1.492-12.919,5.15-4.942
-	c2.952,6.436-1.076,16.238,1.492,8.297c2.568-7.943-2.984,17.473-10.589,12.633c0,0-5.548-5.93,2.456-10.869"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M481.402,184.646c0,0,1.492-12.915,5.153-4.94
-	c2.945,6.435-1.08,16.238,1.492,8.297c2.564-7.943-2.984,17.473-10.588,12.635c0,0-5.552-5.927,2.451-10.871"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M497.063,177.803c0,0,1.495-12.915,5.149-4.94
-	c2.953,6.433-1.075,16.238,1.496,8.294c2.567-7.943-2.984,17.476-10.588,12.637c0,0-5.552-5.928,2.451-10.873"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M513.076,171.883c0,0,1.495-12.918,5.149-4.945
-	c2.959,6.438-1.075,16.242,1.496,8.298c2.572-7.945-2.984,17.475-10.584,12.639c0,0-5.552-5.933,2.447-10.873"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M528.736,165.04c0,0,1.492-12.921,5.153-4.942
-	c2.949,6.433-1.079,16.238,1.492,8.294c2.571-7.945-2.984,17.477-10.585,12.637c0,0-5.551-5.931,2.448-10.87"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M541.836,163.342c0,0,1.489-12.919,5.153-4.942
-	c2.948,6.431-1.079,16.236,1.492,8.293c2.564-7.941-2.987,17.475-10.592,12.637c0,0-5.544-5.927,2.455-10.869"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M557.5,156.497c0,0,1.492-12.919,5.149-4.942
-	c2.952,6.435-1.079,16.24,1.492,8.296c2.567-7.943-2.984,17.474-10.589,12.637c0,0-5.548-5.929,2.452-10.873"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M573.513,150.573c0,0,1.492-12.915,5.15-4.941
-	c2.948,6.435-1.076,16.241,1.492,8.296c2.571-7.943-2.987,17.477-10.585,12.639c0,0-5.551-5.929,2.448-10.873"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M589.174,143.732c0,0,1.492-12.919,5.152-4.944
-	c2.949,6.435-1.079,16.24,1.489,8.296c2.571-7.941-2.984,17.476-10.585,12.635c0,0-5.552-5.927,2.452-10.869"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M604.463,139.43c0,0,1.492-12.918,5.15-4.941
-	c2.953,6.435-1.075,16.239,1.496,8.292c2.568-7.939-2.987,17.477-10.593,12.641c0,0-5.548-5.927,2.454-10.873"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M620.128,132.585c0,0,1.489-12.916,5.149-4.938
-	c2.949,6.435-1.075,16.236,1.492,8.293c2.572-7.943-2.988,17.473-10.584,12.637c0,0-5.553-5.928,2.443-10.872"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M636.138,126.665c0,0,1.492-12.919,5.152-4.945
-	c2.953,6.435-1.071,16.239,1.493,8.3c2.57-7.947-2.98,17.474-10.586,12.635c0,0-5.548-5.929,2.444-10.873"/>
-<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M651.805,119.82c0,0,1.485-12.919,5.146-4.942
-	c2.952,6.435-1.075,16.24,1.492,8.296c2.571-7.943-2.98,17.474-10.585,12.637c0,0-5.548-5.929,2.448-10.869"/>
-<polygon style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="397.563,196.124 668.619,101.262 
-	668.619,141.292 397.563,237.677 "/>
-<line style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="668.619" y1="132.338" x2="399.489" y2="228.015"/>
-<polygon style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="525.601,196.929 525.601,203.81 
-	542.566,203.81 542.566,191.045 "/>
-<line style="fill:#BCB8B8;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="522.92" y1="203.326" x2="522.92" y2="252.078"/>
-<line style="fill:#BCB8B8;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="545.402" y1="203.326" x2="545.402" y2="252.078"/>
-<rect x="525.601" y="220.591" style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" width="16.965" height="9.545"/>
-<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="525.601,203.326 542.566,232.577 
-	542.566,203.326 525.601,232.577 "/>
-<polygon style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="671.91,100.643 688.24,100.643 
-	704.566,100.643 704.566,158.731 685.736,158.731 671.91,129.687 "/>
-<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="688.24,101.915 688.24,130.439 
-	703.139,130.439 "/>
-<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="671.91" y1="129.367" x2="671.91" y2="195.714"/>
-<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="704.566" y1="131.912" x2="704.566" y2="198.257"/>
-<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="690.266" y1="161.2" x2="690.266" y2="198.257"/>
-<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="680.252" y1="132.021" x2="680.252" y2="198.367"/>
-<polyline style="fill:#9A9A98;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="703.139,159.419 685.496,159.419 
-	685.496,177.95 679.299,196.478 703.139,196.478 "/>
-<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="673.102,184.527 703.139,184.527 
-	703.139,165.083 673.102,165.083 "/>
-<line style="fill:#9A9A98;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="673.102" y1="163.445" x2="715.773" y2="163.594"/>
-<polygon style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="736.949,100.643 720.619,100.643 
-	704.293,100.643 704.293,158.731 723.123,158.731 736.949,129.687 "/>
-<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="720.619,101.915 720.619,130.439 
-	705.721,130.439 "/>
-<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="704.293" y1="131.912" x2="704.293" y2="198.257"/>
-<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="718.595" y1="161.2" x2="718.595" y2="198.257"/>
-<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="728.608" y1="132.021" x2="728.608" y2="198.367"/>
-<polyline style="fill:#9A9A98;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="705.721,159.419 723.363,159.419 
-	723.363,177.95 729.561,196.478 705.721,196.478 "/>
-<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="735.758,184.527 705.721,184.527 
-	705.721,165.083 735.758,165.083 "/>
-<line style="fill:#9A9A98;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="735.758" y1="163.445" x2="693.086" y2="163.594"/>
-<polygon style="fill:#FEE000;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="42.863,221.629 87.54,221.629 
-	107.176,227.498 89.341,235.298 42.863,235.298 "/>
-<text transform="matrix(1.1384 0 0 1 42.8628 208.4277)" style="font-family:'MyriadPro-Regular'; font-size:14.6284;">Cassava In</text>
-<polygon style="fill:#FEE000;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="42.863,52.102 87.54,52.102 
-	107.176,57.971 89.341,65.772 42.863,65.772 "/>
-<text transform="matrix(1.1384 0 0 1 42.8628 38.9019)" style="font-family:'MyriadPro-Regular'; font-size:14.6284;">Protein Water</text>
-<line style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="107.176" y1="227.498" x2="394.75" y2="227.498"/>
-<polygon style="fill:#FEE000;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="42.863,128.811 87.54,128.811 
-	107.176,134.68 89.342,142.48 42.863,142.48 "/>
-<text transform="matrix(1.1384 0 0 1 42.8628 115.6104)" style="font-family:'MyriadPro-Regular'; font-size:14.6284;">Water</text>
-<polyline style="fill:none;stroke:#141D47;stroke-width:3;stroke-miterlimit:10;" points="107.176,57.971 756.082,57.971 
-	756.082,199.75 "/>
-<polyline style="fill:none;stroke:#3E59A8;stroke-width:3;stroke-miterlimit:10;" points="107.176,134.68 175.611,134.68 
-	175.611,38.902 775.582,38.902 775.582,198.367 "/>
-<polygon style="fill:#ED1F24;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="1091.631,456.886 1136.309,456.886 
-	1155.943,462.755 1138.109,470.556 1091.631,470.556 "/>
-<text transform="matrix(1.1384 0 0 1 1083.9639 448.7646)" style="font-family:'MyriadPro-Regular'; font-size:14.6284;">CoEx01</text>
-<circle style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="946.425" cy="389.423" r="18.591"/>
-<polyline style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="936.566,405.186 925.387,415.103 
-	967.463,415.103 956.285,405.186 "/>
-<polyline style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="946.426,370.833 982.195,370.833 
-	982.195,383.119 963.92,383.119 "/>
-<circle style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="946.426" cy="389.423" r="13.756"/>
-<circle style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="943.978" cy="391.678" r="18.591"/>
-<polyline style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="934.119,407.44 922.939,417.357 
-	965.016,417.357 953.836,407.44 "/>
-<polyline style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="943.977,373.087 979.746,373.087 
-	979.746,385.374 961.471,385.374 "/>
-<circle style="fill:#ED1C24;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="943.978" cy="391.678" r="13.757"/>
-<line style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="979.746" y1="385.374" x2="982.195" y2="383.119"/>
-<line style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="979.746" y1="373.087" x2="982.195" y2="370.833"/>
-<circle style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="943.976" cy="473.913" r="18.591"/>
-<polyline style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="934.117,489.676 922.938,499.593 
-	965.014,499.593 953.836,489.676 "/>
-<polyline style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="943.977,455.323 979.746,455.323 
-	979.746,467.609 961.471,467.609 "/>
-<circle style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="943.977" cy="473.913" r="13.756"/>
-<circle style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="941.528" cy="476.168" r="18.591"/>
-<polyline style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="931.67,491.931 920.49,501.848 
-	962.566,501.848 951.387,491.931 "/>
-<polyline style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="941.527,457.577 977.297,457.577 
-	977.297,469.864 959.021,469.864 "/>
-<circle style="fill:#ED1C24;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="941.528" cy="476.168" r="13.757"/>
-<line style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="977.297" y1="469.864" x2="979.746" y2="467.609"/>
-<line style="fill:#818184;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="977.297" y1="457.577" x2="979.746" y2="455.323"/>
-<polygon style="fill:#ED1F24;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="1091.631,372.408 1136.309,372.408 
-	1155.943,378.277 1138.109,386.078 1091.631,386.078 "/>
-<text transform="matrix(1.1384 0 0 1 1085.9639 363.5879)" style="font-family:'MyriadPro-Regular'; font-size:14.6284;">CoEx01</text>
-<line style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="979.746" y1="379.23" x2="1091.631" y2="379.23"/>
-<line style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="977.521" y1="464.412" x2="1091.631" y2="464.412"/>
-<line style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="791.303" y1="391.678" x2="924.459" y2="391.678"/>
-<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="853.5,391.678 853.5,476.168 
-	924.459,476.168 "/>
-<text transform="matrix(1.1384 0 0 1 669.8037 282.2065)" style="font-family:'MyriadPro-Regular'; font-size:22.7195;">RAS01</text>
-<text transform="matrix(1.1384 0 0 1 662.1377 86.8477)" style="font-family:'MyriadPro-Regular'; font-size:22.7195;">CHOP01</text>
-<text transform="matrix(1.1384 0 0 1 910.1377 362.543)" style="font-family:'MyriadPro-Regular'; font-size:14;">PumpRa1-01</text>
-<text transform="matrix(1.1384 0 0 1 910.1377 448.7646)" style="font-family:'MyriadPro-Regular'; font-size:14;">PumpRa1-02</text>
+<rect x="3" y="2.013" style="fill:#CFCECE;stroke:#000000;stroke-width:4;stroke-miterlimit:10;" width="1194.75" height="576.32"/>
+<polyline style="fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;" points="705.293,214.912 705.293,281.257 
+	705.293,310.498 1094.559,310.498 "/>
+<polygon style="fill:#FEE000;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="38.863,304.629 83.54,304.629 
+	103.176,310.498 85.341,318.298 38.863,318.298 "/>
+<text transform="matrix(1.1384 0 0 1 38.8628 291.4277)" style="font-family:'MyriadPro-Regular'; font-size:14;">Cassava In</text>
+<line style="fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;" x1="103.176" y1="310.498" x2="395.75" y2="310.498"/>
+<polygon style="fill:#ED1F24;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="1094.631,303.039 1139.309,303.039 
+	1158.943,308.908 1141.109,316.709 1094.631,316.709 "/>
+<text transform="matrix(1.1384 0 0 1 1093.9639 294.2188)" style="font-family:'MyriadPro-Regular'; font-size:14;">Rasper01</text>
+<g>
+	<polygon style="fill:#BCB8B8;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="670.951,223.821 398.563,320.677 
+		398.563,279.124 669.619,184.262 	"/>
+	
+		<line style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="398.563" y1="295.084" x2="671.005" y2="194.824"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M419.771,291.481c0,0,1.492-12.917,5.153-4.942
+		c2.952,6.435-1.08,16.24,1.492,8.296c2.572-7.943-2.98,17.474-10.585,12.637c0,0-5.548-5.927,2.448-10.873"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M435.432,284.717c0,0,1.496-12.921,5.153-4.946
+		c2.956,6.435-1.079,16.241,1.492,8.298c2.571-7.945-2.98,17.474-10.585,12.634c0,0-5.555-5.928,2.455-10.874"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M451.448,278.793c0,0,1.496-12.918,5.153-4.942
+		c2.952,6.435-1.079,16.238,1.492,8.293c2.568-7.939-2.983,17.475-10.588,12.639c0,0-5.552-5.932,2.455-10.872"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M467.112,271.95c0,0,1.492-12.919,5.15-4.942
+		c2.952,6.436-1.076,16.238,1.492,8.297c2.568-7.943-2.984,17.473-10.589,12.633c0,0-5.548-5.93,2.456-10.869"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M482.402,267.646c0,0,1.492-12.915,5.153-4.94
+		c2.945,6.435-1.08,16.238,1.492,8.297c2.564-7.943-2.984,17.473-10.588,12.635c0,0-5.552-5.927,2.451-10.871"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M498.063,260.803c0,0,1.495-12.915,5.149-4.94
+		c2.953,6.433-1.075,16.238,1.496,8.294c2.567-7.943-2.984,17.476-10.588,12.637c0,0-5.552-5.928,2.451-10.873"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M514.076,254.883c0,0,1.495-12.918,5.149-4.945
+		c2.959,6.438-1.075,16.242,1.496,8.298c2.572-7.945-2.984,17.475-10.584,12.639c0,0-5.552-5.933,2.447-10.873"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M529.736,248.04c0,0,1.492-12.921,5.153-4.942
+		c2.949,6.433-1.079,16.238,1.492,8.294c2.571-7.945-2.984,17.477-10.585,12.637c0,0-5.551-5.931,2.448-10.87"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M542.836,246.342c0,0,1.489-12.919,5.153-4.942
+		c2.948,6.431-1.079,16.236,1.492,8.293c2.564-7.941-2.987,17.475-10.592,12.637c0,0-5.544-5.927,2.455-10.869"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M558.5,239.497c0,0,1.492-12.919,5.149-4.942
+		c2.952,6.435-1.079,16.24,1.492,8.296c2.567-7.943-2.984,17.474-10.589,12.637c0,0-5.548-5.929,2.452-10.873"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M574.513,233.573c0,0,1.492-12.915,5.15-4.941
+		c2.948,6.435-1.076,16.241,1.492,8.296c2.571-7.943-2.987,17.477-10.585,12.639c0,0-5.551-5.929,2.448-10.873"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M590.174,226.732c0,0,1.492-12.919,5.152-4.944
+		c2.949,6.435-1.079,16.24,1.489,8.296c2.571-7.941-2.984,17.476-10.585,12.635c0,0-5.552-5.927,2.452-10.869"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M605.463,222.43c0,0,1.492-12.918,5.15-4.941
+		c2.953,6.435-1.075,16.239,1.496,8.292c2.568-7.939-2.987,17.477-10.593,12.641c0,0-5.548-5.927,2.454-10.873"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M621.128,215.585c0,0,1.489-12.916,5.149-4.938
+		c2.949,6.435-1.075,16.236,1.492,8.293c2.572-7.943-2.988,17.473-10.584,12.637c0,0-5.553-5.928,2.443-10.872"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M637.138,209.665c0,0,1.492-12.919,5.152-4.945
+		c2.953,6.435-1.071,16.239,1.493,8.3c2.57-7.947-2.98,17.474-10.586,12.635c0,0-5.548-5.929,2.444-10.873"/>
+	<path style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" d="M652.805,202.82c0,0,1.485-12.919,5.146-4.942
+		c2.952,6.435-1.075,16.24,1.492,8.296c2.571-7.943-2.98,17.474-10.585,12.637c0,0-5.548-5.929,2.448-10.869"/>
+	<polygon style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="398.563,279.124 669.619,184.262 
+		669.619,224.292 398.563,320.677 	"/>
+	
+		<line style="fill:#51514F;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="669.619" y1="215.338" x2="400.489" y2="311.016"/>
+	<polygon style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="526.601,279.929 526.601,286.81 
+		543.566,286.81 543.566,274.045 	"/>
+	
+		<line style="fill:#BCB8B8;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="523.92" y1="286.326" x2="523.92" y2="335.078"/>
+	
+		<line style="fill:#BCB8B8;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="546.402" y1="286.326" x2="546.402" y2="335.078"/>
+	
+		<rect x="526.601" y="303.591" style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" width="16.965" height="9.545"/>
+	<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="526.601,286.326 543.566,315.577 
+		543.566,286.326 526.601,315.577 	"/>
+	<polygon style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="672.91,183.643 689.24,183.643 
+		705.566,183.643 705.566,241.731 686.736,241.731 672.91,212.687 	"/>
+	<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="689.24,184.915 689.24,213.439 
+		704.139,213.439 	"/>
+	
+		<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="672.91" y1="212.367" x2="672.91" y2="278.714"/>
+	
+		<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="705.566" y1="214.912" x2="705.566" y2="281.257"/>
+	
+		<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="691.266" y1="244.2" x2="691.266" y2="281.257"/>
+	
+		<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="681.252" y1="215.021" x2="681.252" y2="281.367"/>
+	<polyline style="fill:#9A9A98;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="704.139,242.419 686.496,242.419 
+		686.496,260.95 680.299,279.478 704.139,279.478 	"/>
+	<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="674.102,267.527 704.139,267.527 
+		704.139,248.083 674.102,248.083 	"/>
+	
+		<line style="fill:#9A9A98;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="674.102" y1="246.445" x2="716.773" y2="246.594"/>
+	<polygon style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="737.949,183.643 721.619,183.643 
+		705.293,183.643 705.293,241.731 724.123,241.731 737.949,212.687 	"/>
+	<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="721.619,184.915 721.619,213.439 
+		706.721,213.439 	"/>
+	
+		<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="719.595" y1="244.2" x2="719.595" y2="281.257"/>
+	
+		<line style="fill:#FCEE22;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="729.608" y1="215.021" x2="729.608" y2="281.367"/>
+	<polyline style="fill:#9A9A98;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="706.721,242.419 724.363,242.419 
+		724.363,260.95 730.561,279.478 706.721,279.478 	"/>
+	<polyline style="fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" points="736.758,267.527 706.721,267.527 
+		706.721,248.083 736.758,248.083 	"/>
+	
+		<line style="fill:#9A9A98;stroke:#000000;stroke-width:6;stroke-miterlimit:10;" x1="736.758" y1="246.445" x2="694.086" y2="246.594"/>
+	<text transform="matrix(1.1384 0 0 1 672.9102 145.8477)" style="font-family:'MyriadPro-Regular'; font-size:18;">CHOP01</text>
+</g>
 </svg>

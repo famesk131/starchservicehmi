@@ -80,11 +80,35 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -160,6 +184,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CexController.cs" />
     <Compile Include="Controllers\DewController.cs" />
+    <Compile Include="Controllers\DistributerController.cs" />
     <Compile Include="Controllers\FexController.cs" />
     <Compile Include="Controllers\FldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -169,19 +194,48 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CEX.cs" />
+    <Compile Include="Models\CHOPPER.cs" />
     <Compile Include="Models\ConnectionBuilder.cs" />
+    <Compile Include="Models\DESANDING.cs" />
+    <Compile Include="Models\DEWATERING.cs" />
     <Compile Include="Models\DupeNVC.cs" />
+    <Compile Include="Models\FEX.cs" />
+    <Compile Include="Models\FLASHDRYER.cs" />
     <Compile Include="Models\JsonModel.cs" />
     <Compile Include="Models\MachineTag.cs" />
+    <Compile Include="Models\RASPER.cs" />
+    <Compile Include="Models\SEP.cs" />
+    <Compile Include="Models\VIBRATOR.cs" />
+    <Compile Include="Models\WASHER.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\PREP\PREPOver1.svg" />
-    <Content Include="Content\PREP\Rasper1.svg" />
-    <Content Include="Content\PREP\Desanding1.svg" />
-    <Content Include="Content\PREP\Washer1.svg" />
+    <Content Include="Content\CEX\CEX01.svg">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\CEX\CEX02.svg" />
+    <Content Include="Content\CEX\CEX03.svg" />
+    <Content Include="Content\CEX\CEXOverview.svg" />
+    <Content Include="Content\DEW\DEWOverview.svg" />
+    <Content Include="Content\FEX\FEX01.svg" />
+    <Content Include="Content\FEX\FEX02.svg" />
+    <Content Include="Content\FEX\FEX34.svg" />
+    <Content Include="Content\FEX\FEXOverview.svg" />
+    <Content Include="Content\FLD\FLDOverview.svg" />
+    <Content Include="Content\PREP1\Chopper1s.svg" />
+    <Content Include="Content\PREP1\Desanding1s.svg" />
+    <Content Include="Content\PREP1\PREP1Overs.svg" />
+    <Content Include="Content\PREP1\Rasper1s.svg" />
+    <Content Include="Content\PREP1\Washer1s.svg" />
+    <Content Include="Content\PREP2\Chopper2s.svg" />
+    <Content Include="Content\PREP2\Desanding2s.svg" />
+    <Content Include="Content\PREP2\PREP2Overs.svg" />
+    <Content Include="Content\PREP2\Rasper2s.svg" />
+    <Content Include="Content\PREP2\Washer2s.svg" />
+    <Content Include="Content\VIB\VIBOverview.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -197,6 +251,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -221,24 +277,46 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutNLK.cshtml" />
     <Content Include="Views\Home\Overview.cshtml" />
-    <Content Include="Views\Home\PID.cshtml" />
+    <Content Include="Views\Home\Alarm.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
     <Content Include="Views\Shared\_LayoutNavbar.cshtml" />
     <Content Include="Views\Fex\FEXOver.cshtml" />
     <Content Include="Views\Dew\DEWOver.cshtml" />
-    <Content Include="Views\Fld\FLDOver.cshtml" />
     <Content Include="Views\Vib\VIBOver.cshtml" />
     <Content Include="Views\Sep\SEPOver.cshtml" />
     <Content Include="Views\Prep\PREP1Over.cshtml" />
     <Content Include="Views\Prep\PREP2Over.cshtml" />
     <Content Include="Views\Cex\CEXOver.cshtml" />
+    <Content Include="Views\Prep\Prep1Unit\PREP1Washer.cshtml" />
+    <Content Include="Views\Prep\Prep2Unit\PREP2Washer.cshtml" />
+    <Content Include="Views\Prep\Prep1Unit\PREP1Desanding.cshtml" />
+    <Content Include="Views\Prep\Prep2Unit\PREP2Desanding.cshtml" />
+    <Content Include="Views\Prep\Prep1Unit\PREP1Chopper.cshtml" />
+    <Content Include="Views\Prep\Prep2Unit\PREP2Chopper.cshtml" />
+    <Content Include="Views\Prep\Prep1Unit\PREP1Rasper.cshtml" />
+    <Content Include="Views\Prep\Prep2Unit\PREP2Rasper.cshtml" />
+    <Content Include="Views\Cex\CEX01.cshtml" />
+    <Content Include="Views\Cex\CEX02.cshtml" />
+    <Content Include="Views\Cex\CEX03.cshtml" />
+    <Content Include="Views\Fex\FEX01.cshtml" />
+    <Content Include="Views\Fex\FEX02.cshtml" />
+    <Content Include="Views\Fex\FEX34.cshtml" />
+    <Content Include="Views\Vib\VIB01.cshtml" />
+    <Content Include="Views\Vib\MM4.cshtml" />
+    <Content Include="Views\Sep\SEP01.cshtml" />
+    <Content Include="Views\Sep\SEP02.cshtml" />
+    <Content Include="Views\Sep\SEP03.cshtml" />
+    <Content Include="Views\Dew\DEWManual.cshtml" />
+    <Content Include="Views\Dew\DEWAuto.cshtml" />
+    <Content Include="Views\Fld\FLDOver.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\CEX\" />
+    <Folder Include="Content\SEP\" />
     <Folder Include="css\" />
     <Folder Include="font-awesome\" />
     <Folder Include="js\" />
+    <Folder Include="Views\Distributer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

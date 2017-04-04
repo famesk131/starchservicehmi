@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Starch Web Service HMI";
+}
+<body>
+    <div id="wrapper">
+        @Html.Partial("_LayoutNavbar")
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Preparation Line 1: Rasper Unit </b>
+                                <div style="display: inline-block;">
+                                    <button style="margin-left: 15px;" onclick="location.href='@Url.Action("PREP1Desanding", "Prep")'; return false;" type="button" class="btn btn-secondary "> Desanding </button>
+                                    <button onclick="location.href='@Url.Action("PREP1Washer", "Prep")'; return false;" type="button" class="btn btn-secondary "> Washer </button>
+                                    <button onclick="location.href='@Url.Action("PREP1Chopper", "Prep")'; return false;" type="button" class="btn btn-secondary"> Chopper </button>
+                                    <button class="btn btn-secondary disabled"> Rasper </button>
+                                    <button onclick="location.href='@Url.Action("PREP1Over", "Prep")'; return false;" type="button" class="btn btn-primary active"> PREP1: Overview </button>
+                                </div>
+                                <div style="display: inline-block; float: right;">
+                                    <button onclick="location.href='@Url.Action("PREP1Desanding", "Prep")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
+                                    <button onclick="location.href='@Url.Action("PREP1Washer", "Prep")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
+                                    
+                                </div>
+                                    
+
+
+
+                                </div>
+                            <div class="panel-body">
+                                <div>
+                                    <object data="/Content/PREP1/Rasper1s.svg" type="image/svg+xml" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+</body>

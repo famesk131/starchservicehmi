@@ -13,5 +13,20 @@ namespace StarchServiceHMI.Controllers
         {
             return View();
         }
+
+        public ActionResult FEX01()
+        {
+            return View();
+        }
+
+        public ActionResult FEX02()
+        {
+            return View();
+        }
+
+        public ActionResult FEX34()
+        {
+            return View();
+        }
     }
 }

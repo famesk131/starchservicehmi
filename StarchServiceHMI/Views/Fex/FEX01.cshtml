@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Starch Web Service HMI";
+}
+<body>
+    <div id="wrapper">
+        @Html.Partial("_LayoutNavbar")
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Fine Extractor: FEX01 </b>
+
+                                <div style="display: inline-block;">
+                                    <button style="margin-left: 15px;" class="btn btn-secondary disabled"> FEX01 </button>
+                                    <button onclick="location.href='@Url.Action("FEX02", "Fex")'; return false;" type="button" class="btn btn-secondary "> FEX02 </button>
+                                    <button onclick="location.href='@Url.Action("FEX34", "Fex")'; return false;" type="button" class="btn btn-secondary"> FEX34 </button>
+                                    <button onclick="location.href='@Url.Action("FEXOver", "Fex")'; return false;" type="button" class="btn btn-primary active"> FEX: Overview </button>
+                                </div>
+                                <div style="display: inline-block; float: right;">
+                                    <button onclick="location.href='@Url.Action("PREP2Desanding", "Fex")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
+                                    <button onclick="location.href='@Url.Action("PREP2Washer", "Fex")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
+                                    
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <object data="/Content/FEX/FEX01.svg" type="image/svg+xml" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+</body>

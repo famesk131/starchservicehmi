@@ -11,7 +11,7 @@ namespace StarchServiceHMI.Models
     {
         private int id;
         private string tagName;
-        string urlAPI = "http://192.168.245.132:39320/iotgateway/read?ids=simulator.Device1.ABC";
+        string urlAPI = "http://192.168.245.144:39320/iotgateway/read?ids=simulator.Device1.ABC";
 
         public int Id
         {

@@ -6,23 +6,30 @@
         @Html.Partial("_LayoutNavbar")
         <div id="page-wrapper">
             <div class="container-fluid">
-
                 <!-- /.row -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Coarse Extractor Overview </h3>
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Coarse Extractor Overview </b>
+                                <div style="display: inline-block;">
+                                    <button style="margin-left: 15px;" onclick="location.href='@Url.Action("CEX01", "Cex")'; return false;" type="button" class="btn btn-secondary"> CEX01 </button>
+                                    <button onclick="location.href='@Url.Action("CEX02", "Cex")'; return false;" type="button" class="btn btn-secondary"> CEX02 </button>
+                                    <button onclick="location.href='@Url.Action("CEX03", "Cex")'; return false;" type="button" class="btn btn-secondary"> CEX03 </button>
+                                    
+                                </div>
+
+
+
                             </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/system_overview.svg" type="image/svg+xml" />
+                                    <object data="/Content/CEX/CEXOverview.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- /.row -->
         </div>
@@ -31,5 +38,4 @@
     <!-- /#page-wrapper -->
     </div>
     <!-- /#wrapper -->
-
 </body>

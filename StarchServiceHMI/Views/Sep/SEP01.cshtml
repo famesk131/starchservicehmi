@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Starch Web Service HMI";
+}
+<body>
+    <div id="wrapper">
+        @Html.Partial("_LayoutNavbar")
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Separator: SEP01 </b>
+
+                                <div style="display: inline-block;">
+                                    <button style="margin-left: 15px;" class="btn btn-secondary disabled"> SEP01 </button>
+                                    <button onclick="location.href='@Url.Action("SEP02", "Sep")'; return false;" type="button" class="btn btn-secondary "> SEP02 </button>
+                                    <button onclick="location.href='@Url.Action("SEP03", "Sep")'; return false;" type="button" class="btn btn-secondary"> SEP03 </button>
+                                    <button onclick="location.href='@Url.Action("SEPOver", "Sep")'; return false;" type="button" class="btn btn-primary active"> SEP: Overview </button>
+                                </div>
+                                <div style="display: inline-block; float: right;">
+                                    <button onclick="location.href='@Url.Action("PREP2Desanding", "Cex")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
+                                    <button onclick="location.href='@Url.Action("PREP2Washer", "Cex")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
+
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <object data="/Content/CEX/CEX01.svg" type="image/svg+xml" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+</body>

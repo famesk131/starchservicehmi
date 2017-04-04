@@ -13,5 +13,15 @@ namespace StarchServiceHMI.Controllers
         {
             return View();
         }
+
+        public ActionResult VIB01()
+        {
+            return View();
+        }
+
+        public ActionResult MM4()
+        {
+            return View();
+        }
     }
 }

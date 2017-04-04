@@ -13,5 +13,15 @@ namespace StarchServiceHMI.Controllers
         {
             return View();
         }
+
+        public ActionResult DEWManual()
+        {
+            return View();
+        }
+
+        public ActionResult DEWAuto()
+        {
+            return View();
+        }
     }
 }
