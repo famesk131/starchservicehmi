@@ -24,7 +24,7 @@
                             </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/CEX/CEXOverview.svg" type="image/svg+xml" />
+                                    <object id="svg_sep" data="/Content/SEP/SEPOverviews1.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
@@ -36,6 +36,84 @@
         <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
-    </div>
+    
     <!-- /#wrapper -->
 </body>
+@using StarchServiceHMI.Models
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+        if (typeof (EventSource) !== "undefined") {
+            var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 97).Tag_name)";
+            var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+            source.onmessage = function (event) {
+                console.log(typeof(event.data));
+                document.getElementById("svg_sep").contentDocument.getElementById("YieldSepOver").innerHTML = "Yield : " + parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("SEPOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 98).Tag_name)";
+            var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_sep").contentDocument.getElementById("EMFSepOver").innerHTML = "EMF : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("SEPOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 99).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_sep").contentDocument.getElementById("PerfSep1").innerHTML = "Perf.Sep1 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("SEPOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 100).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_sep").contentDocument.getElementById("PerfSep2").innerHTML = "Perf.Sep2 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("SEPOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 101).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_sep").contentDocument.getElementById("PerfSep3").innerHTML = "Perf.Sep3 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("SEPOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+
+</script>

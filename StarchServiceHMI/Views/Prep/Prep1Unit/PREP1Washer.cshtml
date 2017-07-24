@@ -32,7 +32,7 @@
                                 </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/PREP1/Washer1s.svg" type="image/svg+xml" />
+                                    <object id="svg_prep1" data="/Content/PREP1/Washer1s.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
@@ -47,3 +47,60 @@
     </div>
     <!-- /#wrapper -->
 </body>
+@using StarchServiceHMI.Models
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+        if (typeof (EventSource) !== "undefined") {
+            var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 47).Tag_name)";
+            var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+            source.onmessage = function (event) {
+                console.log(typeof(event.data));
+                document.getElementById("svg_prep1").contentDocument.getElementById("WaterWasher1").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Prep1").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 48).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_prep1").contentDocument.getElementById("status-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", 'rgb(102, 102, 101)');
+            else
+                $(elm).css("fill", "red");
+        };
+    } else {
+        document.getElementById("Prep1").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+
+
+
+
+
+</script>

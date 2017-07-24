@@ -11,7 +11,7 @@ namespace StarchServiceHMI.Models
     {
         private int id;
         private string tagName;
-        string urlAPI = "http://192.168.245.144:39320/iotgateway/read?ids=simulator.Device1.ABC";
+        
 
         public int Id
         {
@@ -60,7 +60,7 @@ namespace StarchServiceHMI.Models
                 //ViewData["Message_V"] = reader["tag_name"].ToString();
                 //System.Diagnostics.Debug.WriteLine(reader["tag_name"].ToString());
             }
-            
+            //sqlCom.ExecuteNonQuery();
             conn.Close();
 
             return listMachineTag;

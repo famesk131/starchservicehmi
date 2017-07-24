@@ -20,8 +20,8 @@
                                     <button onclick="location.href='@Url.Action("FEXOver", "Fex")'; return false;" type="button" class="btn btn-primary active"> FEX: Overview </button>
                                 </div>
                                 <div style="display: inline-block; float: right;">
-                                    <button onclick="location.href='@Url.Action("PREP2Desanding", "Fex")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
-                                    <button onclick="location.href='@Url.Action("PREP2Washer", "Fex")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
+                                    <button onclick="location.href='@Url.Action("Index", "ProcessControl")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
+                                    <button onclick="location.href='@Url.Action("Dashboard", "Dashboard")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
                                    
                                 </div>
 
@@ -31,7 +31,7 @@
                             </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/FEX/FEX02.svg" type="image/svg+xml" />
+                                    <object id="svg_fex" data="/Content/FEX/FEX02z.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
@@ -43,6 +43,114 @@
         <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
-    </div>
+    
     <!-- /#wrapper -->
 </body>
+@using StarchServiceHMI.Models
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+        if (typeof (EventSource) !== "undefined") {
+            var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 78).Tag_name)";
+            var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+            source.onmessage = function (event) {
+                console.log(typeof(event.data));
+                document.getElementById("svg_fex").contentDocument.getElementById("PerL420").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("FiEx02").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 79).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_fex").contentDocument.getElementById("YieldFex2").innerHTML = "Yield : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("FiEx02").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 80).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_fex").contentDocument.getElementById("EMFFex2").innerHTML = "EMF : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("FiEx02").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 81).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_fex").contentDocument.getElementById("status-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", 'rgb(102, 102, 101)');
+            else
+                $(elm).css("fill", "red");
+        };
+    } else {
+        document.getElementById("FiEx02").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 82).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_fex").contentDocument.getElementById("pump1-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("FiEx02").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 83).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_fex").contentDocument.getElementById("pump2-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("FiEx02").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+</script>

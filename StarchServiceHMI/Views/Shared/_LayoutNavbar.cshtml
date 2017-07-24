@@ -61,18 +61,26 @@
     </ul>
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
+
         <ul class="nav navbar-nav side-nav" >
             
 
             <li>
                 <a href="@Url.Action("Overview", "Home")">
-                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> OVERVIEW
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Overview
                 </a>
             </li>
 
+            <li>
+                <a href="@Url.Action("Dashboard", "Dashboard")">
+                    <i class="fa fa-fw fa-dashboard"></i> Dashboard
+                </a>
+            </li>
 
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> UNIT </a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo">
+                    <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Unit 
+                </a>
                 
                     <li>
                         <a href="@Url.Action("PREP1Over", "Prep")">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preparation Line 1</a>
@@ -98,22 +106,20 @@
                     <li>
                         <a href="@Url.Action("FLDOver", "Fld")">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flash Dryer</a>
                     </li>
-           </li>
-
-                
-           
+            
             <li>
-                <a href="@Url.Action("Alarm", "Home")">
-                    <i class="fa fa-bell"></i> ALARM
+                <a href="@Url.Action("Index", "ProcessControl")">
+                    <i class="glyphicon glyphicon-edit"></i> Controller
                 </a>
             </li>
 
             <li>
-                <a href="@Url.Action("Dashboard", "Home")">
-                    <i class="fa fa-fw fa-bar-chart-o"></i> DASHBOARD
+                <a href="@Url.Action("Index", "Setting")">
+                    <i class="glyphicon glyphicon-cog"></i> Setting
                 </a>
             </li>
         </ul>
+        
     </div>
 
     

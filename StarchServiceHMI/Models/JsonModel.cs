@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Diagnostics;
 using System.Data.SqlClient;
+using StarchServiceHMI.Controllers;
 
 namespace StarchServiceHMI.Models
 {
@@ -75,7 +76,8 @@ namespace StarchServiceHMI.Models
                 //webClient.QueryString.Add("ids", matchineTag.TagName);
             }
             webClient.QueryString = dnvc;
-            //Debug.WriteLine("Hello");
+            //Debug.WriteLine("Hellooooo");
+            //Debug.WriteLine(dnvc.ToString());
             
             string respones = webClient.DownloadString(url); // get json string from URL
 
@@ -84,11 +86,13 @@ namespace StarchServiceHMI.Models
             return jsonObject; // return json object for use in other method
         }
 
-        public void collectJsonValueToDB()
+        public void collectJsonValueToDB(JObject json)
         {
-            JObject jsonResponse = getAllMachineTagValue("http://192.168.245.147:39320/iotgateway/read");
+            
+            JObject jsonResponse = getAllMachineTagValue("http://192.168.245.139:39320/iotgateway/read");
+            //JObject jsonResponse = getAllMachineTagValue("http://127.0.0.1:39320/iotgateway/read");
             SqlConnection conn = ConnectionBuilder.getConnection();
-            string sql = "INSERT INTO Value (tag_name_fk, v) VALUES (@param1, @param2)";
+            string sql = "INSERT INTO Value (opc_tagname, value) VALUES (@param1, @param2)";
             SqlCommand sqlCom = new SqlCommand(sql, conn);
             conn.Open();
             foreach (var jsonArray in jsonResponse["readResults"])
@@ -101,6 +105,7 @@ namespace StarchServiceHMI.Models
                 
             }
             conn.Close();
+            
         }
 
         public override string ToString()

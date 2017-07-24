@@ -1,0 +1,323 @@
+﻿@{
+    ViewBag.Title = "Starch Web Service HMI";
+}
+<body>
+    <div id="wrapper">
+        @Html.Partial("_LayoutNavbar")
+        <div id="page-wrapper">
+            <div class="container-fluid">
+
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Select Page </b>
+                            </div>
+                            <div class="panel-body">
+                                <form method="get" action="@Url.Action("WebpageQuery", "Setting")">
+                                    <select name="webpage">
+                                        @foreach (var page in (List<string[]>)ViewData["TagGroup"])
+                                        {
+                                            <option value="@page[0]">@page[1]</option>
+                                        }
+                                    </select>
+                                    <input type="hidden" value="tag" name="type" />
+                                    <input type="submit" value="Submit" />
+                                </form>
+                            </div>
+                            <div class="panel-body">
+                                @ViewData["messenge"]
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Select Controller </b>
+                            </div>
+                            <div class="panel-body">
+                                <form method="get" action="@Url.Action("ControllerQuery", "Setting")">
+                                    <select name="webpage">
+                                        @foreach (var controllerArray in (List<string[]>)ViewData["ControllerSet"])
+                                        {
+                                            <option value="@controllerArray[0]">@controllerArray[1]</option>
+                                        }
+                                    </select>
+                                    <input type="hidden" value="controller" name="type" />
+                                    <input type="submit" value="Submit" />
+                                </form>
+                            </div>
+                            <div class="panel-body">
+                                @ViewData["messenge"]
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> IP Config </b>
+                            </div>
+                            <div class="panel-body">
+                                <form method="get" action="@Url.Action("changeIP", "Setting")">
+                                    <input type="text" name="ip" value="192.168.1.55" />
+                                    <input type="submit" value="Submit" />
+                                </form>
+                            </div>
+                            <div class="panel-body">
+                                @ViewData["messenge"]
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                @if ((String)ViewData["PageName"] != null)
+                {
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> @ViewData["PageName"] </b>
+                                </div>
+                                <div class="panel-body">
+                                    <form method="get" action="@Url.Action("MatchingTag", "Setting")">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Position</th>
+                                                        <th>Tag</th>
+                                                    </tr>
+                                                </thead>
+                                                @using StarchServiceHMI.Models
+                                                <tbody>
+                                                    @{int i = 1;}
+                                                    @foreach (var x in (List<TagConfig>)ViewData["TagConfigObject"])
+                                                    {
+                                                        <tr>
+                                                            <td>@i</td>
+                                                            <td>@x.Tag_id</td>
+                                                            <td>
+                                                                <input type="text" name="@x.Id" value="@x.Tag_name" />
+                                                            </td>
+                                                        </tr>
+                                                        i++;
+                                                    }
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <input type="submit" value="Submit" />
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if ((String)ViewData["PageName"] != null)
+                {
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> @ViewData["PageName"] </b>
+                                </div>
+                                <div class="panel-body">
+                                    <form method="get" action="@Url.Action("MatchingTag", "Setting")">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Position</th>
+                                                        <th>Tag</th>
+                                                    </tr>
+                                                </thead>
+                                                @using StarchServiceHMI.Models
+                                                <tbody>
+                                                    @{int i = 1;}
+                                                    @foreach (var x in (List<TagConfig>)ViewData["TagConfigObject"])
+                                                    {
+                                                        <tr>
+                                                            <td>@i</td>
+                                                            <td>@x.Tag_id</td>
+                                                            <td>
+                                                                <input type="text" name="@x.Id" value="@x.Tag_name" />
+                                                            </td>
+                                                        </tr>
+                                                        i++;
+                                                    }
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <input type="submit" value="Submit" />
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+    <!-- /#wrapper -->
+</body>
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.MoistureL311" })');
+            source.onmessage = function (event) {
+                console.log(typeof(event.data));
+                document.getElementById("svg_cex").contentDocument.getElementById("MoistureL311").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+    if (typeof (EventSource) !== "undefined") {
+        var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.PerL311" })');
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_cex").contentDocument.getElementById("PerL311").innerHTML = parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+
+
+    if (typeof (EventSource) !== "undefined") {
+        var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.YieldCex1" })');
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_cex").contentDocument.getElementById("YieldCex1").innerHTML = "Yield : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.EMFCex1" })');
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_cex").contentDocument.getElementById("EMFCex1").innerHTML = "EMF : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.Status" })');
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_cex").contentDocument.getElementById("status-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", 'rgb(102, 102, 101)');
+            else
+                $(elm).css("fill", "red");
+        };
+    } else {
+        document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+    if (typeof (EventSource) !== "undefined") {
+        var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.Pump1" })');
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_cex").contentDocument.getElementById("pump1-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.Pump2" })');
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_cex").contentDocument.getElementById("pump2-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.Pump3" })');
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_cex").contentDocument.getElementById("pump3-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.Pump4" })');
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_cex").contentDocument.getElementById("pump4-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+</script>
+

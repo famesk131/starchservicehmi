@@ -1,36 +1,115 @@
-﻿@{
-    ViewBag.Title = "Starch Web Service HMI";
+﻿<html lang="en">
+
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+
+    <style type="text/css">
+        .panel-footer {
+            color: white;
+            background-color: rgb(51, 51, 51);
+            border-top: none !important;
+            border-bottom-right-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
+        }
+
+        .panel-heading {
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+        }
+
+        #page-wrapper {
+            height: 100% !important;
+        }
+
+        .form-group {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        h5 {
+            text-align: right;
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 2px;
+            background-color: rgb(51, 51, 51);
+            border: none;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            padding: 20px;
+            width: 300px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+         }
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
-<body>
-    <div id="wrapper">
-        @Html.Partial("_LayoutNavbar")
-        <div id="page-wrapper">
-            <div class="container-fluid">
 
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> HOME </h3>
-                            </div>
-                            <div class="panel-body">
-                                <div>
-                                    <object data="/Content/system_overview.svg" type="image/svg+xml" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
 
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container-fluid -->
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+    </style>
+
+</head>
+<body background="~/Content/Cassava.jpg">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">iStarch</a>
         </div>
-        <!-- /#page-wrapper -->
+    </nav>
+    
+        
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-md-9 push-md-3">
+                <h1>iStarch</h1>
+                <h3>Web Service HMI application.</h3>
+                &nbsp;&nbsp;&nbsp;<h4>" Everywhere Access "</h4>
+                <br/>
+                <h6>North Eastern Starch Industry Co, Ltd.</h6>
+
+            </div>
+            <div class="col-md-3 pull-md-9">
+                <img src="~/Content/iStarch.jpg" width="200" height="200">
+            </div>
+            </div>
     </div>
-    <!-- /#wrapper -->
+
+    <div class="container">
+        
+        <button class="button button2" style="vertical-align:middle; color:white" onclick="location.href='@Url.Action("Overview", "Home")'; return false;"><span>Go to website</span></button>
+    </div>
     
 </body>
-
+</html>

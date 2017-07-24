@@ -109,7 +109,6 @@ C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\System.Web.WebPages.Razor.xml
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Antlr3.Runtime.pdb
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\bin\Newtonsoft.Json.xml
-C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.csprojResolveAssemblyReference.cache
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.dll
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\StarchServiceHMI\StarchServiceHMI\obj\Debug\StarchServiceHMI.pdb
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\starchservicehmi\StarchServiceHMI\bin\Microsoft.AspNet.SignalR.Core.dll
@@ -123,3 +122,6 @@ C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\starchservicehmi\
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\starchservicehmi\StarchServiceHMI\bin\Microsoft.Owin.xml
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\starchservicehmi\StarchServiceHMI\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\starchservicehmi\StarchServiceHMI\bin\Microsoft.Owin.Security.xml
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\starchservicehmi\StarchServiceHMI\obj\Debug\StarchServiceHMI.csprojResolveAssemblyReference.cache
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\starchservicehmi\StarchServiceHMI\obj\Debug\StarchServiceHMI.Resource.resources
+C:\Users\fame_\Desktop\โปรเจคโรงแป้ง\starchservicehmi\StarchServiceHMI\obj\Debug\StarchServiceHMI.csproj.GenerateResource.Cache

@@ -1,0 +1,735 @@
+﻿@{
+    ViewBag.Title = "Starch Web Service HMI";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Bootstrap Admin Template</title>
+    <script src="/js/jquery.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    <style type="text/css">
+        .panel-footer {
+            color: white;
+            background-color: rgb(51, 51, 51);
+            border-top: none !important;
+            border-bottom-right-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
+        }
+
+        .panel-heading {
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+        }
+
+        #page-wrapper {
+            height: 100% !important;
+        }
+
+        .form-group {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        h5 {
+    text-align: right;
+} 
+
+    </style>
+</head>
+
+    
+    
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        @Html.Partial("_LayoutNavbar")
+
+
+
+        <div id="page-wrapper" style="height: 100%">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header" style="margin-top: 2px">
+                            Dashboard
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+                
+                <!-- /.row -->
+
+                <div class="row">
+                    
+                        <div class="col-sm-8">
+
+                            <div class="row">
+
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="panel panel-primary" style="border-color: rgb(51, 51, 51);">
+                                        <a href="#">
+                                            <div class="panel-footer">
+                                                <span class="pull-left" style="font-size: 23px;">Startch In</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                        <div class="panel-heading" style="background-color: rgb(51, 51, 51);">
+                                            <div class="row">
+                                                <div class="col-xs-7 text-right">
+                                                    <div class="huge" id="StarchInDash">26</div>
+                                                </div>
+                                                <div class="col-xs-12 text-right">
+                                                    <div style="font-size: 21px;">Ton/Hr</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="panel panel-primary" style="border-color: rgb(51, 51, 51);">
+                                        <a href="#">
+                                            <div class="panel-footer">
+                                                <span class="pull-left" style="font-size: 23px;">Starch Out</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                        <div class="panel-heading" style="background-color: rgb(51, 51, 51);">
+                                            <div class="row">
+                                                <div class="col-xs-7 text-right">
+                                                    <div class="huge" id="StarchOutDash">26</div>
+                                                </div>
+                                                <div class="col-xs-12 text-right">
+                                                    <div style="font-size: 21px;">Ton/Hr</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="panel panel-primary" style="border-color: rgb(51, 51, 51);">
+                                        <a href="#">
+                                            <div class="panel-footer">
+                                                <span class="pull-left" style="font-size: 23px;">Yield</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                        <div class="panel-heading" style="background-color: rgb(51, 51, 51);">
+                                            <div class="row">
+                                                <div class="col-xs-7 text-right">
+                                                    <div class="huge" id="YieldDash">26</div>
+                                                </div>
+                                                <div class="col-xs-12 text-right">
+                                                    <div style="font-size: 21px;">%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="panel panel-primary" style="border-color: rgb(51, 51, 51);">
+                                        <a href="#">
+                                            <div class="panel-footer">
+                                                <span class="pull-left" style="font-size: 23px;">EMF</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                        <div class="panel-heading" style="background-color: rgb(51, 51, 51);">
+                                            <div class="row">
+                                                <div class="col-xs-7 text-right">
+                                                    <div class="huge" id="EMFDash">26</div>
+                                                </div>
+                                                <div class="col-xs-12 text-right">
+                                                    <div style="font-size: 21px;">Watt/Hr</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="border:thick; border-color:black;">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <center>
+                                            <h4 class="page-header" style="margin-top: 5px; ">
+                                                Starch Percentage (%)
+                                            </h4>
+                                        </center>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="margin-left: 15px; margin-bottom:-20px; ">
+
+                                    <div class="col-md-3" style="margin-right: -20px">
+                                        <div class="panel panel-primary" style="border-color: #EEBE3B;">
+                                            <a href="#">
+                                                <div class="panel-footer" style="background-color: #EEBE3B">
+                                                    <span style="font-size: 14px; color:black;">Preparation 1</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <div class="panel-heading" style="background-color: #EEBE3B;">
+                                                <div class="row">
+                                                    <div class="col-xs-7 text-right">
+                                                        <div id="PerL101" style="color:black; font-size: 15px;">0</div>
+                                                    </div>
+                                                    <div class="col-xs-12 text-right">
+                                                        <div style="font-size: 14px; color:black;">%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="margin-right: -20px">
+                                        <div class="panel panel-primary" style="border-color: #EEBE3B;">
+                                            <a href="#">
+                                                <div class="panel-footer" style="background-color: #EEBE3B">
+                                                    <span style="font-size: 14px; color:black;">Preparation 2</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <div class="panel-heading" style="background-color: #EEBE3B;">
+                                                <div class="row">
+                                                    <div class="col-xs-7 text-right">
+                                                        <div id="PerL201" style="color:black; font-size: 15px;">0</div>
+                                                    </div>
+                                                    <div class="col-xs-12 text-right">
+                                                        <div style="font-size: 14px; color:black;">%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="margin-right: -20px">
+                                        <div class="panel panel-primary" style="border-color: #EEBE3B;">
+                                            <a href="#">
+                                                <div class="panel-footer" style="background-color: #EEBE3B">
+                                                    <span style="font-size: 14px; color:black;">Coarse Extractor 1</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <div class="panel-heading" style="background-color: #EEBE3B;">
+                                                <div class="row">
+                                                    <div class="col-xs-7 text-right">
+                                                        <div id="PerL311" style="color:black; font-size: 15px;">0</div>
+                                                    </div>
+                                                    <div class="col-xs-12 text-right">
+                                                        <div style="font-size: 14px; color:black;">%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="margin-right: -20px">
+                                        <div class="panel panel-primary" style="border-color: #EEBE3B;">
+                                            <a href="#">
+                                                <div class="panel-footer" style="background-color: #EEBE3B">
+                                                    <span style="font-size: 14px; color:black;">Coarse Extractor 2</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <div class="panel-heading" style="background-color: #EEBE3B;">
+                                                <div class="row">
+                                                    <div class="col-xs-7 text-right">
+                                                        <div id="PerL321" style="color:black; font-size: 15px;">0</div>
+                                                    </div>
+                                                    <div class="col-xs-12 text-right">
+                                                        <div style="font-size: 14px; color:black;">%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" style="margin-left: 15px">
+
+                                    <div class="col-md-3" style="margin-right: -20px">
+                                        <div class="panel panel-primary" style="border-color: #EEBE3B;">
+                                            <a href="#">
+                                                <div class="panel-footer" style="background-color: #EEBE3B">
+                                                    <span style="font-size: 14px; color:black;">Coarse Extractor 3</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <div class="panel-heading" style="background-color: #EEBE3B;">
+                                                <div class="row">
+                                                    <div class="col-xs-7 text-right">
+                                                        <div id="PerL331" style="color:black; font-size: 15px;">0</div>
+                                                    </div>
+                                                    <div class="col-xs-12 text-right">
+                                                        <div style="font-size: 14px; color:black;">%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="margin-right: -20px">
+                                        <div class="panel panel-primary" style="border-color: #EEBE3B;">
+                                            <a href="#">
+                                                <div class="panel-footer" style="background-color: #EEBE3B">
+                                                    <span style="font-size: 14px; color:black;">Fine Extractor 1</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <div class="panel-heading" style="background-color: #EEBE3B;">
+                                                <div class="row">
+                                                    <div class="col-xs-7 text-right">
+                                                        <div id="PerL410" style="color:black; font-size: 15px;">0</div>
+                                                    </div>
+                                                    <div class="col-xs-12 text-right">
+                                                        <div style="font-size: 14px; color:black;">%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="margin-right: -20px">
+                                        <div class="panel panel-primary" style="border-color: #EEBE3B;">
+                                            <a href="#">
+                                                <div class="panel-footer" style="background-color: #EEBE3B">
+                                                    <span style="font-size: 14px; color:black;">Fine Extractor 2</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <div class="panel-heading" style="background-color: #EEBE3B;">
+                                                <div class="row">
+                                                    <div class="col-xs-7 text-right">
+                                                        <div id="PerL420" style="color:black; font-size: 15px;">0</div>
+                                                    </div>
+                                                    <div class="col-xs-12 text-right">
+                                                        <div style="font-size: 14px; color:black;">%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="margin-right: -20px">
+                                        <div class="panel panel-primary" style="border-color: #EEBE3B;">
+                                            <a href="#">
+                                                <div class="panel-footer" style="background-color: #EEBE3B">
+                                                    <span style="font-size: 14px; color:black;">Vibrator</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <div class="panel-heading" style="background-color: #EEBE3B;">
+                                                <div class="row">
+                                                    <div class="col-xs-7 text-right">
+                                                        <div id="PerL501" style="color:black; font-size: 15px;">0</div>
+                                                    </div>
+                                                    <div class="col-xs-12 text-right">
+                                                        <div style="font-size: 14px; color:black;">%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    <div class="col-sm-4">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Date & Time</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="text-center">
+                                        <span id="time-current" style="font-size: 50px;">16:48:05</span>
+                                        <hr>
+                                        <span id="date-current" style="font-size: 20px;">12/2/2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <center>
+                                <h4 class="page-header" style="margin-top: 5px; ">
+                                    Unit Performance (%)
+                                </h4>
+                            </center>
+                            
+                            <div class="right">
+                                <div class="col-md-6">Coarse Extractor 1:</div>
+                                <div class="col-md-3" id="PerfCex1">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Coarse Extractor 2:</div>
+                                <div class="col-md-3" id="PerfCex2">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Coarse Extractor 3:</div>
+                                <div class="col-md-3" id="PerfCex3">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Fine Extractor 1:</div>
+                                <div class="col-md-3" id="PerfFex1">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Fine Extractor 2:</div>
+                                <div class="col-md-3" id="PerfFex2">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Fine Extractor 3:</div>
+                                <div class="col-md-3" id="PerfFex34">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Vibrator:</div>
+                                <div class="col-md-3" id="PerfVib">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Separator 1:</div>
+                                <div class="col-md-3" id="PerfSep1">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Separator 2:</div>
+                                <div class="col-md-3" id="PerfSep2">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Separator 3:</div>
+                                <div class="col-md-3" id="PerfSep3">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Dewatering:</div>
+                                <div class="col-md-3" id="PerfDew">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            <div class="right">
+                                <div class="col-md-6">Flash Dryer:</div>
+                                <div class="col-md-3" id="PerfFld">0</div>
+                                <div class="col-md-3">%</div>
+                            </div>
+                            
+                                          
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+        </div>
+       
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+
+        
+
+    <script>
+
+
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex.PerfCex1" })');
+            source.onmessage = function (event) {
+                console.log(typeof (event.data));
+                document.getElementById("PerfCex1").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("CoEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex.PerfCex2" })');
+            source.onmessage = function (event) {
+                console.log(typeof (event.data));
+                document.getElementById("PerfCex2").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("FiEx01").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex.PerfCex3" })');
+            source.onmessage = function (event) {
+                console.log(typeof (event.data));
+                document.getElementById("PerfCex3").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("FiEx34").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Fex.PerfFex1" })');
+            source.onmessage = function (event) {
+                console.log(typeof (event.data));
+                document.getElementById("PerfFex1").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Sep1").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Fex.PerfFex2" })');
+            source.onmessage = function (event) {
+                console.log(typeof (event.data));
+                document.getElementById("PerfFex2").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Fex.PerfFex34" })');
+            source.onmessage = function (event) {
+                document.getElementById("PerfFex34").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Vib.PerfVib" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerfVib").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Sep.PerfSep1" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerfSep1").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Sep.PerfSep2" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerfSep2").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Sep.PerfSep3" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerfSep3").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Dew.PerfDew" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerfDew").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Fld.PerfFld" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerfFld").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Dash.YieldDash" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("YieldDash").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Dash.EMFDash" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("EMFDash").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Dash.StarchOutDash" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("StarchOutDash").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Dash.StarchInDash" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("StarchInDash").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Prep1.PerL101" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerL101").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Prep2.PerL201" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerL201").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Fex1.PerL410" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerL410").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex1.PerL311" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerL311").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex2.PerL321" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerL321").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Cex3.PerL331" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerL331").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Vib.PerL501" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerL501").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+        if (typeof (EventSource) !== "undefined") {
+            var source = new EventSource('@Url.Action("Index", "Distributer", new {tag = "StarchSim.Fex2.PerL420" })');
+            source.onmessage = function (event) {
+
+                document.getElementById("PerL420").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+
+
+
+    //Current time display
+    </script>
+
+        <script type="text/javascript">
+        var d, h, m, s, DayNight;
+        currtime();
+
+        $(document).ready(function () {
+            setInterval(function () {
+                currtime();
+            }, 1000);
+        });
+
+        function currtime() {
+            d = new Date();
+            h = d.getHours();
+            m = d.getMinutes();
+            s = d.getSeconds();
+            
+            if (m <= 9) m = "0" + m;
+            if (s <= 9) s = "0" + s;
+
+            $("#time-current").html(h + ":" + m + ":" + s);
+            $("#date-current").html(d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear());
+
+            
+            console.log(h + ":" + m + ":" + s + " " + DayNight);
+        };
+        </script>
+
+        
+
+</body>
+
+</html>

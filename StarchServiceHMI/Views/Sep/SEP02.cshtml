@@ -14,14 +14,14 @@
                                 <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Separator: SEP02 </b>
 
                                 <div style="display: inline-block;">
-                                    <button style="margin-left: 15px;" onclick="location.href='@Url.Action("SEP01", "Sep")'; return false;" type="button" class="btn btn-secondary "class="btn btn-secondary "> SEP01 </button>
+                                    <button style="margin-left: 15px;" onclick="location.href='@Url.Action("SEP01", "Sep")'; return false;" type="button" class="btn btn-secondary" > SEP01 </button>
                                     <button class="btn btn-secondary disabled"> SEP02 </button>
                                     <button onclick="location.href='@Url.Action("SEP03", "Sep")'; return false;" type="button" class="btn btn-secondary"> SEP03 </button>
                                     <button onclick="location.href='@Url.Action("SEPOver", "Sep")'; return false;" type="button" class="btn btn-primary active"> SEP: Overview </button>
                                 </div>
                                 <div style="display: inline-block; float: right;">
-                                    <button onclick="location.href='@Url.Action("PREP2Desanding", "Cex")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
-                                    <button onclick="location.href='@Url.Action("PREP2Washer", "Cex")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
+                                    <button onclick="location.href='@Url.Action("Index", "ProcessControl")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
+                                    <button onclick="location.href='@Url.Action("Dashboard", "Dashboard")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
 
                                 </div>
 
@@ -31,7 +31,7 @@
                             </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/CEX/CEX01.svg" type="image/svg+xml" />
+                                    <object id="svg_sep" data="/Content/SEP/SEP02z.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
@@ -43,6 +43,92 @@
         <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
-    </div>
+    
     <!-- /#wrapper -->
 </body>
+@using StarchServiceHMI.Models
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+        if (typeof (EventSource) !== "undefined") {
+            var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 107).Tag_name)";
+            var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+            source.onmessage = function (event) {
+                console.log(typeof(event.data));
+                document.getElementById("svg_sep").contentDocument.getElementById("YieldSep2").innerHTML = "Yield : " + parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Sep2").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 108).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(typeof (event.data));
+            document.getElementById("svg_sep").contentDocument.getElementById("EMFSep2").innerHTML = "EMF : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Sep2").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 109).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(typeof (event.data));
+            document.getElementById("svg_sep").contentDocument.getElementById("FlowInSep2").innerHTML = parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Sep2").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 110).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(typeof (event.data));
+            document.getElementById("svg_sep").contentDocument.getElementById("FlowOutSep2").innerHTML = parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Sep2").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 111).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_sep").contentDocument.getElementById("status-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", 'rgb(102, 102, 101)');
+            else
+                $(elm).css("fill", "red");
+        };
+    } else {
+        document.getElementById("Sep2").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+
+</script>

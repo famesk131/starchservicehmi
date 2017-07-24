@@ -24,7 +24,7 @@
                             </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/FEX/FEXOverview.svg" type="image/svg+xml" />
+                                    <object id="svg_fex" data="/Content/FEX/FEXOverviews.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
@@ -36,6 +36,85 @@
         <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
-    </div>
+    
     <!-- /#wrapper -->
 </body>
+@using StarchServiceHMI.Models
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+        if (typeof (EventSource) !== "undefined") {
+            var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 69).Tag_name)";
+            var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+            source.onmessage = function (event) {
+                console.log(typeof(event.data));
+                document.getElementById("svg_fex").contentDocument.getElementById("YieldFexOver").innerHTML = "Yield : " + parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("FiExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 70).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_fex").contentDocument.getElementById("EMFFexOver").innerHTML = "EMF : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("FiExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 71).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_fex").contentDocument.getElementById("PerfFex1").innerHTML = "Perf.FiEx1 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("FiExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 72).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_fex").contentDocument.getElementById("PerfFex2").innerHTML = "Perf.FiEx2 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("FiExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 73).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_fex").contentDocument.getElementById("PerfFex34").innerHTML = "Perf.FiEx34 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("FiExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+</script>

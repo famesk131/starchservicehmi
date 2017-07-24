@@ -11,21 +11,23 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Flash Dryer Overview </b>
-                                
-                                <div style="display: inline-block; float: right;">
-                                    <button onclick="location.href='@Url.Action("PREP1Desanding", "Prep")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
-                                    <button onclick="location.href='@Url.Action("PREP1Washer", "Prep")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
+                                <b class="panel-unit" align="left "><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Flash Dryer Overview </b>
+                                <div style="display: inline-block; margin-top:25px;">
+                                    
 
                                 </div>
+                                <div style="display: inline-block; float: right;">
+                                    <button onclick="location.href='@Url.Action("Index", "ProcessControl")'; return false;" type="button" class="btn btn-success" ><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
+                                    <button onclick="location.href='@Url.Action("Dashboard", "Dashboard")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
 
 
+                                </div>
 
 
                             </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/FLD/FLDOverview.svg" type="image/svg+xml" />
+                                    <object id="svg_fld" data="/Content/FLD/FLDOverviewz1.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
@@ -37,6 +39,145 @@
         <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
-    </div>
+    
     <!-- /#wrapper -->
 </body>
+@using StarchServiceHMI.Models
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+        if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 124).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+            source.onmessage = function (event) {
+                document.getElementById("svg_fld").contentDocument.getElementById("TempInheater1").innerHTML = parseFloat(event.data).toFixed(3);
+            };
+        } else {
+            document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 125).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+
+            document.getElementById("svg_fld").contentDocument.getElementById("TempInheater2").innerHTML = parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 126).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+
+            document.getElementById("svg_fld").contentDocument.getElementById("TempOutheater1").innerHTML = parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 127).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+
+            document.getElementById("svg_fld").contentDocument.getElementById("TempOutheater2").innerHTML = parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 128).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+
+            document.getElementById("svg_fld").contentDocument.getElementById("TempInhotcyclone1").innerHTML = parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 129).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+
+            document.getElementById("svg_fld").contentDocument.getElementById("TempInhotcyclone2").innerHTML = parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 130).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+
+            document.getElementById("svg_fld").contentDocument.getElementById("YieldFld").innerHTML = "Yield : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 131).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+
+            document.getElementById("svg_fld").contentDocument.getElementById("PerfFld").innerHTML = "Perf.Fld : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 132).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+
+            document.getElementById("svg_fld").contentDocument.getElementById("EMFFld").innerHTML = "EMF : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 133).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_fld").contentDocument.getElementById("status-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data+"   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", 'rgb(102, 102, 101)');
+            else
+                $(elm).css("fill", "red");
+        };
+    } else {
+        document.getElementById("Fld").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+</script>    

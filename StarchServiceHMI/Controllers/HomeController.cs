@@ -13,46 +13,34 @@ namespace StarchServiceHMI.Controllers
 {
     public class HomeController : Controller
     {
+        public static List<TagConfig> getTagConfigList(string webpageName)
+        {
+            SqlConnection conn = ConnectionBuilder.getConnection();
+            string sql = "SELECT * FROM Tag_Config WHERE webpage = @param1";
+            SqlCommand sqlCom = new SqlCommand(sql, conn);
+            sqlCom.Parameters.AddWithValue("@param1", webpageName);
+            conn.Open();
+
+            List<TagConfig> list = new List<TagConfig>();
+            using (SqlDataReader reader = sqlCom.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    TagConfig tc = new TagConfig();
+                    tc.Id = (int)reader["id"];
+                    tc.Tag_id = reader["tag_id"].ToString();
+                    tc.Webpage = reader["webpage"].ToString();
+                    tc.Tag_name = reader["tag_name"].ToString();
+                    list.Add(tc);
+                }
+            }
+            conn.Close();
+            return list;
+        }
 
         public ActionResult Index()
         {
-            //Laikram
-            /*SqlConnection conn = new SqlConnection("Data Source=DESKTOP-87BI6EK\\FAMESK131;Initial Catalog=StarchServiceHMI;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
-             {
-             conn.Open();
-              string sql = "SELECT tag_name FROM Tag";
-              string sql = "INSERT INTO Tag VALUES (@param1, @param2)";
-
-
-             SqlCommand sqlCom = new SqlCommand(sql, conn);
-             sqlCom.Parameters.AddWithValue("@param1", 1);
-             sqlCom.Parameters.AddWithValue("@param2", "EIEI");
-             sqlCom.ExecuteNonQuery();
-            sqlCom.ExecuteReader();
-            using (SqlDataReader reader = sqlCom.ExecuteReader())
-            {
-               while (reader.Read())
-                    users.Add(reader.GetInt32(0), reader.GetString(1));
-                    ViewData["Message_V"] = reader["tag_name"].ToString();
-            }
-            ViewData["Message_V"] = sqlCom;
-                conn.Close();
-
-             }*/
-
-
-            // string Identifier = @"http://192.168.245.144:39320/iotgateway/read?ids=simulator.Device1.ABC";
-            //JsonModel json = new JsonModel(Identifier);
-            //ViewData["Message_Id"] = json.Id;
-            //ViewData["Message_V"] = json.V;
-
-            //MachineTag.getAll();
-
-            //string x = JsonModel.getJsonObject("http://192.168.245.144:39320/iotgateway/read");
-            new JsonModel().collectJsonValueToDB();
-            
-            //ViewData["Message"] = x;
-
+          
             return View();
         }
 
@@ -73,6 +61,8 @@ namespace StarchServiceHMI.Controllers
         public ActionResult Overview()
         {
             ViewBag.Message = "Your contact page.";
+            List<TagConfig> list = getTagConfigList("Overview");
+            ViewData["TagConfigObject"] = list;
 
             return View();
         }

@@ -16,15 +16,11 @@
                                     <button style="margin-left: 15px;" onclick="location.href='@Url.Action("CEX01", "Cex")'; return false;" type="button" class="btn btn-secondary"> CEX01 </button>
                                     <button onclick="location.href='@Url.Action("CEX02", "Cex")'; return false;" type="button" class="btn btn-secondary"> CEX02 </button>
                                     <button onclick="location.href='@Url.Action("CEX03", "Cex")'; return false;" type="button" class="btn btn-secondary"> CEX03 </button>
-                                    
                                 </div>
-
-
-
                             </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/CEX/CEXOverview.svg" type="image/svg+xml" />
+                                    <object id="svg_cex" data="/Content/CEX/CEXOverviewz.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
@@ -39,3 +35,81 @@
     </div>
     <!-- /#wrapper -->
 </body>
+@using StarchServiceHMI.Models
+        <!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 1).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(typeof(event.data));
+            document.getElementById("svg_cex").contentDocument.getElementById("YieldCexOver").innerHTML = "Yield : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("CoExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 2).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_cex").contentDocument.getElementById("EMFCexOver").innerHTML = "EMF : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("CoExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 3).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_cex").contentDocument.getElementById("PerfCex1").innerHTML = "Perf.CoEx1 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("CoExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 4).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_cex").contentDocument.getElementById("PerfCex2").innerHTML = "Perf.CoEx2 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("CoExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 5).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_cex").contentDocument.getElementById("PerfCex3").innerHTML = "Perf.CoEx3 : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("CoExOver").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+
+</script>

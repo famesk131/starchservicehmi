@@ -12,15 +12,13 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <b class="panel-unit" align="left "><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Dewatering Overview </b>
-                                <div style="display: inline-block;">
-                                    <!--<button style="margin-left: 15px;" onclick="location.href='@Url.Action("DEWManual", "Dew")'; return false;" type="button" class="btn btn-secondary"> DEW01 </button>
-                                    <button onclick="location.href='@Url.Action("DEWAuto", "Dew")'; return false;" type="button" class="btn btn-secondary"> DEW02 </button>
-                                    -->
+                                <div style="display: inline-block; margin-top:25px;">
+                                    
 
                                 </div>
                                 <div style="display: inline-block; float: right;">
-                                    <button onclick="location.href='@Url.Action("PREP1Desanding", "Prep")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
-                                    <button onclick="location.href='@Url.Action("PREP1Washer", "Prep")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
+                                    <button onclick="location.href='@Url.Action("Index", "ProcessControl")'; return false;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Controller </button>
+                                    <button onclick="location.href='@Url.Action("Dashboard", "Dashboard")'; return false;" type="button" class="btn btn-warning"><i class="fa fa-fw fa-bar-chart-o"></i> Dashboard </button>
 
 
                                 </div>
@@ -29,7 +27,7 @@
                             </div>
                             <div class="panel-body">
                                 <div>
-                                    <object data="/Content/DEW/DEWOverview.svg" type="image/svg+xml" />
+                                    <object id="svg_dew" data="/Content/DEW/DEWOverviews1.svg" type="image/svg+xml" />
                                 </div>
                             </div>
                         </div>
@@ -41,6 +39,174 @@
         <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
-    </div>
+    
     <!-- /#wrapper -->
 </body>
+@using StarchServiceHMI.Models
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Morris Charts JavaScript -->
+<script src="/js/plugins/morris/raphael.min.js"></script>
+<script src="/js/plugins/morris/morris.min.js"></script>
+<script src="/js/plugins/morris/morris-data.js"></script>
+<script>
+            $(window).load(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+
+            $(window).resize(function () {
+                var height = $(window).height() - 50; // New height
+                $("#page-wrapper").css("height", height);
+            });
+</script>
+<script>
+
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 115).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_dew").contentDocument.getElementById("YieldDew").innerHTML = "Yield : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 116).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_dew").contentDocument.getElementById("EMFDew").innerHTML = "EMF : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 117).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            console.log(event);
+            document.getElementById("svg_dew").contentDocument.getElementById("PerfDew").innerHTML = "Perf.Dew : " + parseFloat(event.data).toFixed(3);
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 118).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_dew").contentDocument.getElementById("status-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", 'rgb(102, 102, 101)');
+            else
+                $(elm).css("fill", "red");
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 119).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_dew").contentDocument.getElementById("pump1-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 120).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_dew").contentDocument.getElementById("pump2-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 121).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_dew").contentDocument.getElementById("pump3-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 122).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_dew").contentDocument.getElementById("pump4-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+    if (typeof (EventSource) !== "undefined") {
+        var tagname = "?tag=" + "@(((List<TagConfig>)ViewData["TagConfigObject"]).Find(x => x.Id == 123).Tag_name)";
+        var source = new EventSource('@Url.Action("Index", "Distributer")' + tagname);
+        source.onmessage = function (event) {
+            var elm = document.getElementById("svg_dew").contentDocument.getElementById("pump5-light");
+            //if (event.data !== isNaN(true))
+            $(elm).css("fill", 'rgb(102, 102, 101)');
+            console.log(event.data + "   ...")
+            if (event.data == "True")
+                $(elm).css("fill", "#39b339");
+            else if (event.data == "False")
+                $(elm).css("fill", "red");
+
+        };
+    } else {
+        document.getElementById("Dew").innerHTML = "Sorry, your browser does not support server-sent events...";
+    }
+
+
+
+</script>    

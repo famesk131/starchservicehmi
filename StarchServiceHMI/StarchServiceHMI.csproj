@@ -183,13 +183,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CexController.cs" />
+    <Compile Include="Controllers\ChartController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DewController.cs" />
     <Compile Include="Controllers\DistributerController.cs" />
     <Compile Include="Controllers\FexController.cs" />
     <Compile Include="Controllers\FldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PrepController.cs" />
+    <Compile Include="Controllers\ProcessControlController.cs" />
     <Compile Include="Controllers\SepController.cs" />
+    <Compile Include="Controllers\SettingController.cs" />
     <Compile Include="Controllers\VibController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,32 +206,45 @@
     <Compile Include="Models\DupeNVC.cs" />
     <Compile Include="Models\FEX.cs" />
     <Compile Include="Models\FLASHDRYER.cs" />
-    <Compile Include="Models\JsonModel.cs" />
     <Compile Include="Models\MachineTag.cs" />
+    <Compile Include="Models\PidController.cs" />
     <Compile Include="Models\RASPER.cs" />
     <Compile Include="Models\SEP.cs" />
+    <Compile Include="Models\Setting.cs" />
+    <Compile Include="Models\TagConfig.cs" />
     <Compile Include="Models\VIBRATOR.cs" />
     <Compile Include="Models\WASHER.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\CEX\CEX01.svg">
+    <Content Include="Content\CEX\CEX01z.svg">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Content\CEX\CEX02.svg" />
-    <Content Include="Content\CEX\CEX03.svg" />
-    <Content Include="Content\CEX\CEXOverview.svg" />
-    <Content Include="Content\DEW\DEWOverview.svg" />
-    <Content Include="Content\FEX\FEX01.svg" />
-    <Content Include="Content\FEX\FEX02.svg" />
-    <Content Include="Content\FEX\FEX34.svg" />
-    <Content Include="Content\FEX\FEXOverview.svg" />
-    <Content Include="Content\FLD\FLDOverview.svg" />
+    <Content Include="Content\CEX\CEX02z.svg" />
+    <Content Include="Content\CEX\CEX03z.svg" />
+    <Content Include="Content\CEX\CEXOverviewz.svg">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\DEW\DEWOverviews1.svg" />
+    <Content Include="Content\FEX\FEX01z.svg" />
+    <Content Include="Content\FEX\FEX02z.svg" />
+    <Content Include="Content\FEX\FEX34z.svg" />
+    <Content Include="Content\FEX\FEXOverviews.svg" />
+    <Content Include="Content\FLD\ControllerFLD.svg" />
+    <Content Include="Content\FLD\FLDOverviewz.svg" />
+    <Content Include="Content\OVERVIEW\Overviews.svg">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\PREP1\Chopper1s.svg" />
     <Content Include="Content\PREP1\Desanding1s.svg" />
-    <Content Include="Content\PREP1\PREP1Overs.svg" />
+    <Content Include="Content\PREP1\PREP1Overz.svg" />
     <Content Include="Content\PREP1\Rasper1s.svg" />
     <Content Include="Content\PREP1\Washer1s.svg" />
     <Content Include="Content\PREP2\Chopper2s.svg" />
@@ -235,7 +252,11 @@
     <Content Include="Content\PREP2\PREP2Overs.svg" />
     <Content Include="Content\PREP2\Rasper2s.svg" />
     <Content Include="Content\PREP2\Washer2s.svg" />
-    <Content Include="Content\VIB\VIBOverview.svg" />
+    <Content Include="Content\SEP\SEP01z.svg" />
+    <Content Include="Content\SEP\SEP02z.svg" />
+    <Content Include="Content\SEP\SEP03z.svg" />
+    <Content Include="Content\SEP\SEPOverviews1.svg" />
+    <Content Include="Content\VIB\VIBOverviewzz.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -273,7 +294,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\IndexBU.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutNLK.cshtml" />
     <Content Include="Views\Home\Overview.cshtml" />
@@ -301,22 +321,23 @@
     <Content Include="Views\Fex\FEX01.cshtml" />
     <Content Include="Views\Fex\FEX02.cshtml" />
     <Content Include="Views\Fex\FEX34.cshtml" />
-    <Content Include="Views\Vib\VIB01.cshtml" />
-    <Content Include="Views\Vib\MM4.cshtml" />
     <Content Include="Views\Sep\SEP01.cshtml" />
     <Content Include="Views\Sep\SEP02.cshtml" />
     <Content Include="Views\Sep\SEP03.cshtml" />
-    <Content Include="Views\Dew\DEWManual.cshtml" />
-    <Content Include="Views\Dew\DEWAuto.cshtml" />
     <Content Include="Views\Fld\FLDOver.cshtml" />
+    <Content Include="Views\Dashboard\Dashboard.cshtml" />
+    <Content Include="Views\ProcessControl\Index.cshtml" />
+    <Content Include="Views\Chart\Index.cshtml" />
+    <Content Include="Views\Setting\TagInit.cshtml" />
+    <Content Include="Views\Setting\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutMainJS.cshtml" />
+    <Content Include="Views\Shared\_LayoutMainHead.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\SEP\" />
     <Folder Include="css\" />
     <Folder Include="font-awesome\" />
     <Folder Include="js\" />
-    <Folder Include="Views\Distributer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -328,6 +349,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

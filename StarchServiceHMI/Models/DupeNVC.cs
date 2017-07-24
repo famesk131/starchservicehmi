@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -39,6 +40,7 @@ namespace StarchServiceHMI.Models
                         stringBuilder.AppendFormat("&{0}=", _duplicateKey);
                         stringBuilder.Append((string)list[i]);
                     }
+                    //Debug.WriteLine("QS " + stringBuilder.ToString());
                     return stringBuilder.ToString();
                 }
                 return null;
