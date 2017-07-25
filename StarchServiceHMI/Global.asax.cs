@@ -50,39 +50,39 @@ namespace StarchServiceHMI
 
         private void browserTag2DB()
         {
-            bool isSuccess = true;
-            while (isSuccess)
+            //bool isSuccess = true;
+            //while (isSuccess)
+            //{
+            try
             {
-                try
-                {
-                    JObject allTagJson = DistributerController.browserTag();
-                    isSuccess = false;
-                    Debug.WriteLine(allTagJson);
-                    SqlConnection conn = ConnectionBuilder.getConnection();
-                    string sql = "TRUNCATE TABLE Tag";
-                    SqlCommand sqlCom = new SqlCommand(sql, conn);
-                    conn.Open();
-                    sqlCom.ExecuteNonQuery();
+                JObject allTagJson = DistributerController.browserTag();
+                //isSuccess = false;
+                Debug.WriteLine("sadad" + allTagJson);
+                SqlConnection conn = ConnectionBuilder.getConnection();
+                string sql = "TRUNCATE TABLE Tag";
+                SqlCommand sqlCom = new SqlCommand(sql, conn);
+                conn.Open();
+                sqlCom.ExecuteNonQuery();
                 
-                    sql = "INSERT INTO Tag (tag_name) VALUES (@param1)";
-                    sqlCom = new SqlCommand(sql, conn);
+                sql = "INSERT INTO Tag (tag_name) VALUES (@param1)";
+                sqlCom = new SqlCommand(sql, conn);
                     
-                    foreach (var tag in allTagJson["browseResults"])
-                    {
-                        string tagName = tag["id"].ToString();
-                        
-                        sqlCom.Parameters.Clear();
-                        sqlCom.Parameters.AddWithValue("@param1", tagName);
-                        sqlCom.ExecuteNonQuery();
-                    }
-                    conn.Close();
-                }
-                catch (Exception ex)
+                foreach (var tag in allTagJson["browseResults"])
                 {
-                    Debug.WriteLine("Browser Tag API is not Success, " + ex);
-                    Debug.WriteLine("System is try to calling API again.");
+                    string tagName = tag["id"].ToString();
+                        
+                    sqlCom.Parameters.Clear();
+                    sqlCom.Parameters.AddWithValue("@param1", tagName);
+                    sqlCom.ExecuteNonQuery();
                 }
+                conn.Close();
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Browser Tag API is not Success, " + ex);
+                Debug.WriteLine("System is try to calling API again.");
+            }
+           // }
         }
     }
 }
