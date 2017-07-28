@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddController</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="@Url.Action("addController2DB", "Setting")">
+            @using StarchServiceHMI.Models
+            <input type="text" name="controller-name" />
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Position</th>
+                        <th>Tag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{int i = 1;}
+                    @foreach (var x in (List<string[]>)ViewData["VariableSet"])
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@x[1]</td>
+                            <td>
+                                <input type="text" name="@x[0]" />
+                            </td>
+                        </tr>
+                        i++;
+                    }
+
+                </tbody>
+            </table>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+</html>

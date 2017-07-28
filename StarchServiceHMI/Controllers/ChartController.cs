@@ -15,6 +15,7 @@ namespace StarchServiceHMI.Controllers
         public ActionResult Index()
         {
             string controllerId = Request.QueryString["controller-id"];
+            string controllerName = Request.QueryString["controller-name"];
 
             SqlConnection conn = ConnectionBuilder.getConnection();
             string sql = "SELECT * FROM ControllerMatchingTag WHERE controller_set_id = @param1";
@@ -27,7 +28,7 @@ namespace StarchServiceHMI.Controllers
             {
                 while (reader.Read())
                 {
-                    Debug.WriteLine(reader["controller_var_id"].ToString() + " ... " + reader["tag_name"].ToString());
+                    //Debug.WriteLine(reader["controller_var_id"].ToString() + " ... " + reader["tag_name"].ToString());
                     map.Add(reader["controller_var_id"].ToString(), reader["tag_name"].ToString());
                     
                 }
@@ -38,6 +39,8 @@ namespace StarchServiceHMI.Controllers
             //       3 = SP
             conn.Close();
 
+            ViewData["ControllerName"] = controllerName;
+            Debug.WriteLine("controllerName" + controllerName);
             ViewData["ChartVariableArrayInList"] = map; // [ {1, Strah.x.y} , {2, Strag,x,y}, ... ]
 
             return View();
